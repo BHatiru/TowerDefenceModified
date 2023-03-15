@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ed70b6eacfde844a4b897bc9a59c68, type: 3}
+  m_Name: MissleTower
+  m_EditorClassIdentifier: 
+  TypeOfTower: 1
+  Icon: {fileID: 21300000, guid: 26bb02e6a6ea07748942f7f25e7f03fa, type: 3}
+  TowerPrefab: {fileID: 654047633538784268, guid: 46cc83526e7dde7419ed52890b8c4729, type: 3}
+  UpgradeCount: 0
+  UpdageInfo:
+  - Name: Missle Tower Level 0
+    BaseDamage: 45
+    SellPrice: 0
+    UpgradePrice: 0
+    AttackRate: 1
+    Radius: 9
+    Prefab: {fileID: 0}
+  - Name: Missle Tower Level 1
+    BaseDamage: 55
+    SellPrice: 0
+    UpgradePrice: 0
+    AttackRate: 1
+    Radius: 9
+    Prefab: {fileID: 0}
+  - Name: Missle Tower Level 2
+    BaseDamage: 65
+    SellPrice: 0
+    UpgradePrice: 0
+    AttackRate: 1
+    Radius: 9
+    Prefab: {fileID: 0}
