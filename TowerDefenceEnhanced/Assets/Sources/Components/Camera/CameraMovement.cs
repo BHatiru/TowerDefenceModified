@@ -3,6 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class CameraMovement : MonoBehaviour
 {
+    private Rigidbody rb;
+    
     [SerializeField] private float _speed;
     [SerializeField] private BoxCollider _collider;
 
@@ -18,7 +20,7 @@ public class CameraMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         float horizontal = Input.GetAxis("Horizontal");
 
-        Vector3 nextPosition = transform.position + Vector3.right * horizontal + Vector3.forward * vertical;
+        Vector3 nextPosition = transform.position + Vector3.right * -horizontal + Vector3.forward * -vertical;
 
         if (!_bounds.Contains(nextPosition))
         {

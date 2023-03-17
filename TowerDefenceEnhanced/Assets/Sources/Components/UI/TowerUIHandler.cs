@@ -6,7 +6,6 @@ public class TowerUIHandler : MonoBehaviour
     [SerializeField] private BuildTowerPanel _buildTowerPanel;
     [SerializeField] private TowerOptionsPanel _towerOpensPanel;
 
-    // Задча: по события включать или выключать нужные ui элементы
 
     private void Start()
     {
@@ -17,7 +16,7 @@ public class TowerUIHandler : MonoBehaviour
 
     private void OnCellUsed(TowerCell towerCell)
     {
-        _buildTowerPanel.Hide();
+        //_buildTowerPanel.Hide();
         _towerOpensPanel.Show();
     }
 

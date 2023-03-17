@@ -86,6 +86,11 @@ public class BaseTower : MonoBehaviour
         return Level + 1 < TowerData.UpdageInfo.Count;
     }
 
+    public bool IsUpgradable()
+    {
+        return IsActive;
+    }
+
     public TowerSaveInfo GetSaveInfo()
     {
         TowerSaveInfo info = new TowerSaveInfo();

@@ -18,23 +18,20 @@ MonoBehaviour:
   UpgradeCount: 3
   UpdageInfo:
   - Name: Laser Tower Level 0
-    BaseDamage: 85
+    BaseDamage: 70
     SellPrice: 90
     UpgradePrice: 15
-    AttackRate: 200
-    Radius: 9
-    Prefab: {fileID: 0}
-  - Name: Laser Tower Level 1
-    BaseDamage: 155
-    SellPrice: 0
-    UpgradePrice: 40
-    AttackRate: 0
-    Radius: 9
-    Prefab: {fileID: 0}
-  - Name: Laser Tower Level 2
-    BaseDamage: 255
-    SellPrice: 0
-    UpgradePrice: 0
     AttackRate: 5
     Radius: 9
-    Prefab: {fileID: 0}
+  - Name: Laser Tower Level 1
+    BaseDamage: 100
+    SellPrice: 0
+    UpgradePrice: 40
+    AttackRate: 5
+    Radius: 9
+  - Name: Laser Tower Level 2
+    BaseDamage: 125
+    SellPrice: 0
+    UpgradePrice: 0
+    AttackRate: 10
+    Radius: 10

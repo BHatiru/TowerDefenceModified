@@ -22,13 +22,14 @@ public class TowerData : ScriptableObject
         public float UpgradePrice;
         public float AttackRate;
         public float Radius;
-        public GameObject Prefab;
+        //public GameObject Prefab;
     }
 
     public enum TowerType
     {
         MashineGun = 0,
         Missle = 1,
-        Laser = 2
+        Laser = 2,
+        Flame = 3
     }
 }

@@ -49,11 +49,8 @@ public class TowerUpgradeSystem : MonoBehaviour
 
     private void OnUpgradeButtonPressed()
     {
-        // 1. Взять IUpgradable, которая сейчас выделена
-        // 2. Вызвать функцию улучшение
-
         IMouseInteractable currentSelected = _selectionSystem.CurrentSelected;
-        if(_upgradableMap.ContainsKey(currentSelected))
+        if(_upgradableMap.ContainsKey(currentSelected) && _upgradableMap[currentSelected].IsUpgradable())
         {
             _upgradableMap[currentSelected].Upgrade();
             SceneEventSystem.Instance.NotifyBalanceChanged(_upgradableMap[currentSelected].GetUpgradePrice());

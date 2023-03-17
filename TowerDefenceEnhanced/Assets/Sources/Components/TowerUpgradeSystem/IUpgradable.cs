@@ -4,4 +4,6 @@ public interface IUpgradable
     float GetUpgradePrice();
 
     bool HasUpgrade();
+
+    bool IsUpgradable();
 }

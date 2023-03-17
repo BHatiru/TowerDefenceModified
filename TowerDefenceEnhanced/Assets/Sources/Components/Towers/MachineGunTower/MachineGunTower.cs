@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MachineGunTower : BaseTower, IUpgradable
@@ -41,8 +39,12 @@ public class MachineGunTower : BaseTower, IUpgradable
             SetFireParticles(false);
             return;
         }
-
         BaseEnemy target = AvailableEnemies[0];
+        if (target == null)
+        {
+            AvailableEnemies.RemoveAt(0);
+            return;
+        }
 
         Vector3 toEnemyVector = target.transform.position - transform.position;
         toEnemyVector.y = 0;
