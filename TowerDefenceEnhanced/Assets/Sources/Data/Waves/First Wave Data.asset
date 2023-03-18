@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: First Wave Data
   m_EditorClassIdentifier: 
   Enemies:
+  - Count: 15
+    EnemyData: {fileID: 11400000, guid: ddd0ac6ac78c637448d495ae15903db7, type: 2}
   - Count: 10
     EnemyData: {fileID: 11400000, guid: 41e48b34ad6e50049a26dee553397bf9, type: 2}
   - Count: 5

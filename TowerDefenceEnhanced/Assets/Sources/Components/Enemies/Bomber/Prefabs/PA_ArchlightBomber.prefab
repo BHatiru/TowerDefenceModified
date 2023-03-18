@@ -110,8 +110,8 @@ Transform:
   m_GameObject: {fileID: 1976151278063096778}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11.823373, y: 2.05, z: 23.23}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1976151278063259624}
   - {fileID: 1976151278063259630}
@@ -129,7 +129,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1976151278063096778}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.76
+  m_Radius: 0.75
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -154,11 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f834a465e2dc7e14f836f58fe3cb11ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
-  Health: 0
-  Damage: 0
   _enemyState: 0
-  _healthBar: {fileID: 4518416147717986136}
 --- !u!1 &1976151278063096780
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBarCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6561414658142518209, guid: 5cc8a71a53f550a4194547813c12ce32, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6561414658142518223, guid: 5cc8a71a53f550a4194547813c12ce32, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -418,7 +418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6561414658142518223, guid: 5cc8a71a53f550a4194547813c12ce32, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.972
+      value: 1.046
       objectReference: {fileID: 0}
     - target: {fileID: 6561414658142518223, guid: 5cc8a71a53f550a4194547813c12ce32, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -440,19 +440,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6561414659348889763, guid: 5cc8a71a53f550a4194547813c12ce32, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 210
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cc8a71a53f550a4194547813c12ce32, type: 3}
---- !u!114 &4518416147717986136 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6561414658142518220, guid: 5cc8a71a53f550a4194547813c12ce32, type: 3}
-  m_PrefabInstance: {fileID: 7330294857543363732}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cdf2ecf66b0cc341bd32c78bfd3fbf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &4518416147717986139 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6561414658142518223, guid: 5cc8a71a53f550a4194547813c12ce32, type: 3}

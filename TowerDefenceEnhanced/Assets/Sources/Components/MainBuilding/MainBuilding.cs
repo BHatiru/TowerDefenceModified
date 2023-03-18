@@ -4,6 +4,7 @@ public class MainBuilding : MonoBehaviour
 {
     public float Health => _health;
 
+    public Transform _destination;
     [SerializeField] private float _health;
 
     [SerializeField] private HealthBar _healthBar;
@@ -29,7 +30,7 @@ public class MainBuilding : MonoBehaviour
 
     private void GameOver()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
         SceneEventSystem.Instance.NotifyGameLoose();
     }
 }

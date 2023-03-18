@@ -10,8 +10,6 @@ public class SpawnEnemySystem : MonoBehaviour
     [SerializeField] private Transform _secondSpawnPosition;
     [SerializeField] private MainBuilding _mainBuilding;
 
-    [SerializeField] private WaveData _testWave;
-
     private void Awake()
     {
         Enemies = new List<BaseEnemy>();
@@ -20,7 +18,6 @@ public class SpawnEnemySystem : MonoBehaviour
     private void Start()
     {
         SceneEventSystem.Instance.EnemyDied += OnEnemyDied;
-        //SpawnWaveUnit(_testWave, 0.5f);
     }
 
     private void OnDestroy()

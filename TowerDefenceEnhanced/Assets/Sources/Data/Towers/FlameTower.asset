@@ -18,20 +18,20 @@ MonoBehaviour:
   UpgradeCount: 3
   UpdageInfo:
   - Name: Flame Tower Level 0
-    BaseDamage: 50
-    SellPrice: 50
-    UpgradePrice: 0
+    BaseDamage: 20
+    SellPrice: 55
+    UpgradePrice: 110
     AttackRate: 6
     Radius: 5
   - Name: Flame Tower Level 1
-    BaseDamage: 75
-    SellPrice: 75
-    UpgradePrice: 10
+    BaseDamage: 45
+    SellPrice: 80
+    UpgradePrice: 170
     AttackRate: 6
     Radius: 6
   - Name: Flame Tower Level 2
     BaseDamage: 125
     SellPrice: 125
-    UpgradePrice: 150
+    UpgradePrice: 250
     AttackRate: 6
-    Radius: 10
+    Radius: 7

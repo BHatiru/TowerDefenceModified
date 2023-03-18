@@ -18,6 +18,7 @@ public class BaseEnemy : MonoBehaviour
 
     [SerializeField] protected EnemyState _enemyState;
     private HealthBar _healthBar;
+   
 
     public enum EnemyState
     {
@@ -27,6 +28,7 @@ public class BaseEnemy : MonoBehaviour
 
     private void Awake()
     {
+        
         _navMesh = GetComponent<NavMeshAgent>();
         _healthBar = GetComponentInChildren<HealthBar>();
         _isAttacking = true;
@@ -43,8 +45,10 @@ public class BaseEnemy : MonoBehaviour
         _mainBuilding = mainBuilding;
 
         _navMesh.SetDestination(mainBuilding.transform.position);
-        _enemyState = EnemyState.Move;
+        _navMesh.speed = Speed;
 
+        _enemyState = EnemyState.Move;
+        
         _healthBar.Initialize(0, Health);
         _healthBar.SetValue(Health);
     }
@@ -56,16 +60,19 @@ public class BaseEnemy : MonoBehaviour
 
         if(Health <= 0)
         {
+            
             Death(true);
         }
     }
 
     public EnemySaveInfo GetSaveInfo()
     {
-        EnemySaveInfo saveInfo = new EnemySaveInfo();
-        saveInfo.Health = Health;
-        saveInfo.Name = Name;
-        saveInfo.Position = transform.position;
+        EnemySaveInfo saveInfo = new EnemySaveInfo
+        {
+            Health = Health,
+            Name = Name,
+            Position = transform.position
+        };
 
         return saveInfo;
     }

@@ -11,7 +11,7 @@ public class TankEnemy : BaseEnemy
 
         if (_enemyState == EnemyState.Move)
         {
-            if (_navMesh.remainingDistance < 5)
+            if (_navMesh.remainingDistance < 1f)
             {
                 _navMesh.isStopped = true;
                 _enemyState = EnemyState.Attack;

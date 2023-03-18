@@ -18,23 +18,20 @@ MonoBehaviour:
   UpgradeCount: 3
   UpdageInfo:
   - Name: Machine Gun Tower Level 0
-    BaseDamage: 85
-    SellPrice: 90
-    UpgradePrice: 200
-    AttackRate: 200
+    BaseDamage: 55
+    SellPrice: 70
+    UpgradePrice: 130
+    AttackRate: 2
     Radius: 5
-    Prefab: {fileID: 0}
   - Name: Machine Gun Tower Level 1
-    BaseDamage: 0
-    SellPrice: 0
-    UpgradePrice: 0
-    AttackRate: 0
-    Radius: 5
-    Prefab: {fileID: 0}
+    BaseDamage: 85
+    SellPrice: 85
+    UpgradePrice: 190
+    AttackRate: 5
+    Radius: 6
   - Name: Machine Gun Tower Level 2
-    BaseDamage: 0
-    SellPrice: 0
-    UpgradePrice: 0
-    AttackRate: 0
-    Radius: 5
-    Prefab: {fileID: 0}
+    BaseDamage: 120
+    SellPrice: 120
+    UpgradePrice: 240
+    AttackRate: 6
+    Radius: 7

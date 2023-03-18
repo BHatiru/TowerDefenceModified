@@ -43,7 +43,7 @@ public class WaveSystem : MonoBehaviour
        foreach (WaveData wave in _waveDataList)
        {
             yield return TimerCycle(_timeBetweenWaves);
-            _spawnEnemySystem.SpawnWaveUnit(wave, 0.15f);
+            _spawnEnemySystem.SpawnWaveUnit(wave, 0.3f);
             CurrentWaveIndex++;
             yield return WaitForAllEnemiesDie();
        }
@@ -63,7 +63,6 @@ public class WaveSystem : MonoBehaviour
         {
             yield return waitOneSecond;
             _timer--;
-            // обновлять ui таймера
         }
     }
 
@@ -71,11 +70,5 @@ public class WaveSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(15);
         yield break;
-
-        //WaitForEndOfFrame waitForEndOfFrame = new WaitForEndOfFrame();
-        //while(_spawnEnemySystem.Enemies.Count > 0)
-        //{
-        //    yield return waitForEndOfFrame;
-        //}
     }
 }

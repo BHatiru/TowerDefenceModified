@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: TankData
   m_EditorClassIdentifier: 
   Name: Tank
-  Speed: 2
-  Health: 200
-  Damage: 5
+  Speed: 3
+  Health: 150
+  Damage: 10
   AttackRate: 1
   ResourceReward: 7
   Prefab: {fileID: 944260079892466806, guid: 57e59804ead29774ea4ad5cd79e3fcc9, type: 3}
