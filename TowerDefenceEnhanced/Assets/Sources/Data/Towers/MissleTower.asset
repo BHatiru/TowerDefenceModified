@@ -20,7 +20,7 @@ MonoBehaviour:
   - Name: Missle Tower Level 0
     BaseDamage: 45
     SellPrice: 40
-    UpgradePrice: 75
+    UpgradePrice: 100
     AttackRate: 1
     Radius: 8
   - Name: Missle Tower Level 1

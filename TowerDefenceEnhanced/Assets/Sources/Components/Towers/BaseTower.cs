@@ -17,6 +17,7 @@ public class BaseTower : MonoBehaviour
     [Header("Level Objects")]
     [SerializeField] protected GameObject[] _levelObjects;
     [SerializeField] protected Transform _rotateElement;
+    
 
     protected List<BaseEnemy> Enemies;
     protected List<BaseEnemy> AvailableEnemies;
@@ -73,12 +74,21 @@ public class BaseTower : MonoBehaviour
             bool isRightLevel = i == Level;
             _levelObjects[i].SetActive(isRightLevel);
         }
+        
     }
 
     public float GetUpgradePrice()
     {
         TowerData.TowerLevelInfo levelInfo = TowerData.UpdageInfo[Level];
         return levelInfo.UpgradePrice;
+    }
+    public float GetSellPrice(){
+        TowerData.TowerLevelInfo levelInfo = TowerData.UpdageInfo[Level];
+        return levelInfo.SellPrice;
+    }
+
+    public void Sell(){
+        Destroy(gameObject);
     }
 
     public bool HasUpgrade()

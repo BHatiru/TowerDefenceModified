@@ -25,7 +25,7 @@ public class SelectionSystem : MonoBehaviour
         {
             if(_currentInteractable != null)
             {
-                // Снимаем выделение с текущего выделенного объекта, если он есть
+                
                 if(_currentSelected != null && _currentSelected != _currentInteractable)
                 {
                     _currentSelected.Deselect();

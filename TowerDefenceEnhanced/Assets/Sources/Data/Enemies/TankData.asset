@@ -17,5 +17,5 @@ MonoBehaviour:
   Health: 150
   Damage: 10
   AttackRate: 1
-  ResourceReward: 7
+  ResourceReward: 9
   Prefab: {fileID: 944260079892466806, guid: 57e59804ead29774ea4ad5cd79e3fcc9, type: 3}

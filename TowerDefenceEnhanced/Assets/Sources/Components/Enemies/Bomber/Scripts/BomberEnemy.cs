@@ -9,6 +9,7 @@ public class BomberEnemy : BaseEnemy
 
         if (_enemyState == EnemyState.Move)
         {
+            if(!_navMesh.hasPath) return;
             if (_navMesh.remainingDistance < 1f)
             {
                 _navMesh.isStopped = true;

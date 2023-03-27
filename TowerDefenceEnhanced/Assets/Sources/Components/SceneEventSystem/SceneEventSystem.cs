@@ -27,11 +27,15 @@ public class SceneEventSystem : MonoBehaviour
     public event EnemyDieEvent EnemyDied;
 
     public event Action OnUpgradeButtonPressed;
+    public event Action OnSellButtonPressed;
     public event Action GameLoose;
     public event Action GameWin;
+    public event Action GamePaused;
     public event Action<float> BalanceChanged;
+    public event Action GameSave;
 
     public void NotifyUpgradeButtonPressed() => OnUpgradeButtonPressed?.Invoke();
+    public void NotifySellButtonPressed() => OnSellButtonPressed?.Invoke();
 
     public void NotifyCellSelected(TowerCell towerCell) => CellSelected?.Invoke(towerCell);
 
@@ -46,4 +50,7 @@ public class SceneEventSystem : MonoBehaviour
     public void NotifyGameLoose() => GameLoose?.Invoke();
 
     public void NotifyGameWin() => GameWin?.Invoke();
+
+    public void NotifyGamePaused() => GamePaused?.Invoke();
+
 }

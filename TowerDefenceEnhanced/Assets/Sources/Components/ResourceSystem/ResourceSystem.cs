@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ResourceSystem : MonoBehaviour
@@ -35,6 +36,12 @@ public class ResourceSystem : MonoBehaviour
     private void Start()
     {
         SceneEventSystem.Instance.EnemyDied += OnEnemyDied;
+        SceneEventSystem.Instance.OnSellButtonPressed += OnSellButtonPressed;
+    }
+
+    private void OnSellButtonPressed()
+    {
+        
     }
 
     private void OnDestroy()
@@ -42,6 +49,7 @@ public class ResourceSystem : MonoBehaviour
         SceneEventSystem.Instance.EnemyDied -= OnEnemyDied;
     }
 
+    
     private void OnEnemyDied(BaseEnemy enemy, bool giveReward)
     {
         if(giveReward)

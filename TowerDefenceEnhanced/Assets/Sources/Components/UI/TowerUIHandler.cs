@@ -12,12 +12,20 @@ public class TowerUIHandler : MonoBehaviour
         SceneEventSystem.Instance.CellSelected += OnCellSelected;
         SceneEventSystem.Instance.CellDeselected += OnCellDeselected;
         SceneEventSystem.Instance.CellUsed += OnCellUsed;
+        SceneEventSystem.Instance.OnSellButtonPressed += OnSellButtonPressed;
+    }
+
+    private void OnSellButtonPressed()
+    {
+        _towerOpensPanel.Hide();
+        _buildTowerPanel.Show();
     }
 
     private void OnCellUsed(TowerCell towerCell)
     {
         //_buildTowerPanel.Hide();
         _towerOpensPanel.Show();
+        
     }
 
     private void OnCellDeselected(TowerCell towerCell)

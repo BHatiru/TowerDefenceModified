@@ -19,6 +19,7 @@ public class ReturnScreen : MonoBehaviour
 
     private void ReturnToMainMenu()
     {
+        Time.timeScale =1f;
         SceneManager.LoadScene(0);
     }
 }

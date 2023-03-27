@@ -17,8 +17,13 @@ public class LaserTower : BaseTower, IUpgradable
 
     private void Update()
     {
-        if(AvailableEnemies.Count == 0 || !IsActive)
+        if(AvailableEnemies.Count == 0 || !IsActive){
+            _lineRenderer1.SetPosition(1, Vector3.zero);
+            _lineRenderer2.SetPosition(1, Vector3.zero);
+            _lineRenderer3.SetPosition(1, Vector3.zero);
             return;
+        }
+            
 
         BaseEnemy target = AvailableEnemies[0];
         if (target == null)

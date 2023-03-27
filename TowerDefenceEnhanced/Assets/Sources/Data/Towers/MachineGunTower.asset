@@ -24,14 +24,14 @@ MonoBehaviour:
     AttackRate: 2
     Radius: 5
   - Name: Machine Gun Tower Level 1
-    BaseDamage: 85
-    SellPrice: 85
+    BaseDamage: 70
+    SellPrice: 70
     UpgradePrice: 190
     AttackRate: 5
-    Radius: 6
+    Radius: 5
   - Name: Machine Gun Tower Level 2
-    BaseDamage: 120
-    SellPrice: 120
+    BaseDamage: 90
+    SellPrice: 90
     UpgradePrice: 240
     AttackRate: 6
-    Radius: 7
+    Radius: 6

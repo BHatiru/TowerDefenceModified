@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Arachnid
   Speed: 4
-  Health: 75
+  Health: 50
   Damage: 2
   AttackRate: 2
-  ResourceReward: 5
+  ResourceReward: 6
   Prefab: {fileID: 5288427963518650881, guid: 5652adea95e8c684499d1b7d7d54a646, type: 3}

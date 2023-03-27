@@ -64,6 +64,10 @@ public class TowerCell : MonoBehaviour, IMouseInteractable
         SceneEventSystem.Instance.NotifyCellUsed(this);
     }
 
+    public void FreeCell(){
+        _isCellUsed = false;
+    }
+
     public bool IsCellUsed()
     {
         return _isCellUsed;

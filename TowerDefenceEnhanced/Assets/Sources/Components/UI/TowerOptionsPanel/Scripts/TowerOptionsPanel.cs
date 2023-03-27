@@ -17,7 +17,8 @@ public class TowerOptionsPanel : MonoBehaviour
 
     private void Start()
     {
-        _upgradeButton.onClick.AddListener(NotyfiEvent);
+        _upgradeButton.onClick.AddListener(NotyfiEventUpgrade);
+        _sellButton.onClick.AddListener(NotyfiEventSell);
         SceneEventSystem.Instance.BalanceChanged += OnBalanceChanged;
     }
 
@@ -31,9 +32,12 @@ public class TowerOptionsPanel : MonoBehaviour
         SetButtonsInteractivity();
     }
 
-    private void NotyfiEvent()
+    private void NotyfiEventUpgrade()
     {
         SceneEventSystem.Instance.NotifyUpgradeButtonPressed();
+    }
+    private void NotyfiEventSell(){
+        SceneEventSystem.Instance.NotifySellButtonPressed();
     }
 
     public void Show()

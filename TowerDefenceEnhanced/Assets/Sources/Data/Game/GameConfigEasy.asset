@@ -24,10 +24,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42ea10b4847b46d449bde1e9f751ace5, type: 2}
   - {fileID: 11400000, guid: 42ea10b4847b46d449bde1e9f751ace5, type: 2}
   - {fileID: 11400000, guid: 42ea10b4847b46d449bde1e9f751ace5, type: 2}
-  - {fileID: 11400000, guid: 42ea10b4847b46d449bde1e9f751ace5, type: 2}
-  - {fileID: 11400000, guid: 42ea10b4847b46d449bde1e9f751ace5, type: 2}
-  - {fileID: 11400000, guid: 42ea10b4847b46d449bde1e9f751ace5, type: 2}
-  - {fileID: 11400000, guid: 42ea10b4847b46d449bde1e9f751ace5, type: 2}
-  - {fileID: 11400000, guid: 42ea10b4847b46d449bde1e9f751ace5, type: 2}
-  StartBalance: 150
+  StartBalance: 300
   MainBuildingHealth: 350

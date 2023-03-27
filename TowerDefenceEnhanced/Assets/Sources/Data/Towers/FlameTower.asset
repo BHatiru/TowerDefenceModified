@@ -28,10 +28,10 @@ MonoBehaviour:
     SellPrice: 80
     UpgradePrice: 170
     AttackRate: 6
-    Radius: 6
+    Radius: 5
   - Name: Flame Tower Level 2
-    BaseDamage: 125
-    SellPrice: 125
+    BaseDamage: 90
+    SellPrice: 90
     UpgradePrice: 250
     AttackRate: 6
-    Radius: 7
+    Radius: 6

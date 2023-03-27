@@ -16,6 +16,7 @@ public class ArachnidEnemy : BaseEnemy
 
         if (_enemyState == EnemyState.Move)
         {
+            if(!_navMesh.hasPath) return;
             _animator.SetBool("isMoving", true);
             if (_navMesh.remainingDistance < 5)
             {

@@ -9,6 +9,11 @@ public class SpawnEnemySystem : MonoBehaviour
     [SerializeField] private Transform _firstSpawnPosition;
     [SerializeField] private Transform _secondSpawnPosition;
     [SerializeField] private MainBuilding _mainBuilding;
+    [SerializeField] private EnemiesLibrary _enemiesLibrary;
+  
+    
+
+
 
     private void Awake()
     {
@@ -66,11 +71,31 @@ public class SpawnEnemySystem : MonoBehaviour
                 GameObject enemy = Instantiate(enemyPrefab, points[index], Quaternion.identity);
                 BaseEnemy baseEnemy = enemy.GetComponent<BaseEnemy>();
 
-                baseEnemy.Initialize(waveEnemyData.EnemyData, _mainBuilding);
+                baseEnemy.Initialize(waveEnemyData.EnemyData, _mainBuilding, waveEnemyData.EnemyData.Health);
                 Enemies.Add(baseEnemy);
-
                 yield return waitForSeconds;
             }
         }
+    }
+
+    public void LoadEnemies(List<EnemySaveInfo> saveEnemies){
+        Debug.Log("Loading Enemies...");
+        Dictionary<string, EnemyData> _enemiesMap = new Dictionary<string, EnemyData>();
+        foreach(EnemyData enemyData in _enemiesLibrary.enemies){
+            _enemiesMap.Add(enemyData.Name, enemyData);
+        }
+        Debug.Log("Enemies added to the map");
+        foreach(EnemySaveInfo savedEnemy in saveEnemies){
+            Debug.Log("Start of foreach");
+            GameObject enemyPrefab =_enemiesMap[savedEnemy.Name].Prefab;
+            Debug.Log("Error happened?");
+            GameObject enemy = Instantiate(enemyPrefab, savedEnemy.Position, Quaternion.identity);
+            BaseEnemy baseEnemy = enemy.GetComponent<BaseEnemy>();
+
+            baseEnemy.Initialize(_enemiesMap[savedEnemy.Name], _mainBuilding, savedEnemy.Health);
+            Enemies.Add(baseEnemy);
+
+        }
+        Debug.Log("Enemies initialized");
     }
 }
